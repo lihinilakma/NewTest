@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet1" targetNamespace="http://tempuri.org/DataSet1.xsd" xmlns:mstns="http://tempuri.org/DataSet1.xsd" xmlns="http://tempuri.org/DataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="app_sdcConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="app_sdcConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.appointment.Properties.Settings.GlobalReference.Default.app_sdcConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="treatmentsTableAdapter" GeneratorDataComponentClassName="treatmentsTableAdapter" Name="treatments" UserDataComponentName="treatmentsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="app_sdcConnectionString (Settings)" DbObjectName="app_sdc.dbo.treatments" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        consultaion_fee, treatment_fee
+FROM            treatments</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="consultaion_fee" DataSetColumn="consultaion_fee" />
+              <Mapping SourceColumn="treatment_fee" DataSetColumn="treatment_fee" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet1" msprop:Generator_UserDSName="DataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="treatments" msprop:Generator_TableClassName="treatmentsDataTable" msprop:Generator_TableVarName="tabletreatments" msprop:Generator_TablePropName="treatments" msprop:Generator_RowDeletingName="treatmentsRowDeleting" msprop:Generator_RowChangingName="treatmentsRowChanging" msprop:Generator_RowEvHandlerName="treatmentsRowChangeEventHandler" msprop:Generator_RowDeletedName="treatmentsRowDeleted" msprop:Generator_UserTableName="treatments" msprop:Generator_RowChangedName="treatmentsRowChanged" msprop:Generator_RowEvArgName="treatmentsRowChangeEvent" msprop:Generator_RowClassName="treatmentsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="consultaion_fee" msprop:Generator_ColumnVarNameInTable="columnconsultaion_fee" msprop:Generator_ColumnPropNameInRow="consultaion_fee" msprop:Generator_ColumnPropNameInTable="consultaion_feeColumn" msprop:Generator_UserColumnName="consultaion_fee" type="xs:double" minOccurs="0" />
+              <xs:element name="treatment_fee" msprop:Generator_ColumnVarNameInTable="columntreatment_fee" msprop:Generator_ColumnPropNameInRow="treatment_fee" msprop:Generator_ColumnPropNameInTable="treatment_feeColumn" msprop:Generator_UserColumnName="treatment_fee" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
